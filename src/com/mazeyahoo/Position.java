@@ -8,7 +8,14 @@ package com.mazeyahoo;
  */
 public class Position
 {
+	/**
+	 * X-Coordinate of the position.
+	 */
 	public int x;
+	
+	/**
+	 * Y-Coordinate of the position.
+	 */
 	public int y;
 
 	/**
@@ -37,7 +44,6 @@ public class Position
 		this.y = positionToClone.y;
 	}
 
-	@Override
 	/**
 	 * This is a overridden equals method for Position class.
 	 * 
@@ -46,6 +52,7 @@ public class Position
 	 * @return
 	 * 		True if the object is of type position and have same X and Y Coordinates.
 	 */
+	@Override
 	public boolean equals(Object obj) {
 		boolean isEqual = false;
 		if(obj instanceof Position)

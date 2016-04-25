@@ -9,8 +9,8 @@ import java.util.Random;
 0 S . . .
 1 X X X . X X
 2       .
-3   X X X X
-4       G X
+3   X X X X X
+4       G 
 5
 */
 
@@ -22,9 +22,19 @@ import java.util.Random;
  */
 public class Maze
 {
-	char [][] matrix;
+	/**
+	 * Contains the maze
+	 */
+	private char [][] matrix;
+	/**
+	 *  {@link Position} object holding start position in the maze. 
+	 */
 	Position start;
-	List<Position> visited = new ArrayList<>();
+	
+	/**
+	 * List holding visited positions in the maze.
+	 */
+	private List<Position> visited = new ArrayList<>();
 
 	/**
 	 * This constructor creates the Default maze with following configuration.
@@ -37,8 +47,8 @@ public class Maze
 			{'S', ' ', ' ', ' ', ' ', ' '},
 			{'X', 'X', 'X', ' ', 'X', 'X'},
 			{' ', ' ', ' ', ' ', ' ', ' '},
-			{' ', ' ', 'X', 'X', 'X', ' '},
-			{' ', ' ', ' ', 'G', 'X', ' '},
+			{' ', ' ', 'X', 'X', 'X', 'X'},
+			{' ', ' ', ' ', 'G', ' ', ' '},
 			{' ', ' ', ' ', ' ', ' ', ' '}
 		};
 		this.start = new Position(0,0);

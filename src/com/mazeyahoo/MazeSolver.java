@@ -4,17 +4,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
-/*
-0 1 2 3 4 5
-0 S . . .
-1 X X X . X X
-2       .
-3   X X X X
-4       G X
-5
- */
-
-
 /**
  * This is maze solver holding the main method and executes the program.
  * 
@@ -29,9 +18,9 @@ public class MazeSolver {
 	 */
 	public static void main(String[] args) {
 		
+		//Generate random maze with length, breadth
 		//Maze maze = new Maze(5,5);
 		Maze maze = new Maze();
-		//Position start = maze.start;
 		maze.print();
 		List<Integer> movesList = findPath(maze,maze.start);
 		printMoves(movesList);
@@ -50,7 +39,7 @@ public class MazeSolver {
 			return;
 		}
 
-		System.out.print("\nMoves: \nStart");
+		System.out.print("\n*** Moves To Reach Goal *** : \n(U- UP | R - RIGHT | D - DOWN | L - LEFT )\n\nStart");
 		for(int move : movesList)
 		{
 			String moveName = "";
@@ -59,21 +48,21 @@ public class MazeSolver {
 				moveName = "Goal Reached!";
 				break;
 			case 1:
-				moveName = "UP";
+				moveName = "U";
 				break;
 			case 2:
-				moveName = "RIGHT";
+				moveName = "R";
 				break;
 			case 3:
-				moveName = "DOWN";
+				moveName = "D";
 				break;
 			case 4:
-				moveName = "LEFT";
+				moveName = "L";
 				break;
 			default:
 				break;
 			}
-			System.out.print(" --> " + moveName);
+			System.out.print(" -> " + moveName);
 		}
 
 
